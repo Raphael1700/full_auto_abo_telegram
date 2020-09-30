@@ -90,7 +90,7 @@ if($_POST) //Post Data received from product list page.
                 '&PAYMENTREQUEST_0_INSURANCEAMT='.urlencode($InsuranceCost).
                 '&PAYMENTREQUEST_0_AMT='.urlencode($GrandTotal).
                 '&PAYMENTREQUEST_0_CURRENCYCODE='.urlencode($PayPalCurrencyCode).
-                '&LOCALECODE=fr_FR'. //PayPal pages to match the language on your website.
+                '&LOCALECODE=CH'. //PayPal pages to match the language on your website.
                 '&LOGOIMG='.$paypallogo. //site logo
                 '&CARTBORDERCOLOR=FFFFFF'. //border color of cart
                 '&ALLOWNOTE=1';
