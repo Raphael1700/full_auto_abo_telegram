@@ -69,8 +69,8 @@ function get_no_abo_buttons() {
         'inline_keyboard' => array(
             array(
                 //array('text' => 'inline', 'switch_inline_query' => 'true'),
-                array('text' => 'Mein Abo', 'callback_data' => '/abo'),
-                array('text' => 'Abo abschließen', 'url' => $WebsiteUrl),
+                array('text' => 'Mon abo', 'callback_data' => '/abo'),
+                array('text' => 'Inscription', 'url' => $WebsiteUrl),
             )
         )
     );
