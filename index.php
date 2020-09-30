@@ -63,7 +63,7 @@ while($row = $result->fetch_array()) {
 <form method="post" action="process.php">
 <table class="procut_item" border="0" cellpadding="4">
   <tr>
-    <td width="70%"><h4><?=$row["months"].$monate?><span style="font-size:12px">(<?=number_format($row["item_price"]/$row["months"], 2, ',', '.');?> €/mtl.)</span></h4>(das Abo beginnt mit dem Tag der Zahlung und endet automatisch nach <?=$row["abo_days"]?> Tagen)</td>
+    <td width="70%"><h4><?=$row["months"].$monate?><span style="font-size:12px">(<?=number_format($row["item_price"]/$row["months"], 2, ',', '.');?> CHF)</span></h4>(l'abonnement commence le jour du paiement et se termine automatiquement après <?=$row["abo_days"]?> jours)</td>
     <td width="30%">
     <input type="hidden" name="itemname" value="<?=$row["months"]?> mois" /> 
     <input type="hidden" name="itemnumber" value="<?=$row["item_number"]?>" /> 
