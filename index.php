@@ -36,14 +36,14 @@ body{font-family: arial;color: #7A7A7A;margin:0px;padding:0px;}
 </head>
 
 <body>
-<div align="center" style="padding-bottom:5px; padding-top:15px; font-size:24px; font-weight:bolder">ABO</div>
+<div align="center" style="padding-bottom:5px; padding-top:15px; font-size:24px; font-weight:bolder">PoGo Fribourg abonnement</div>
 <div align="center" style="padding-bottom:8px; font-size:12px"><?=$header ?></div>
 <div class="product_wrapper">
 <div class="channel_item">
-<h4 align="center"><b>Du erhältst Zugriff auf folgende Kan&auml;le:</b></h4>
+<h4 align="center"><b>Vous aurez accès aux salons suivants:</b></h4>
 <table align="center">
 <?php
-foreach ( $mysqli->query("SELECT * FROM channels ORDER BY sort DESC, id DESC") as $channel ) {
+foreach ( $mysqli->query("SELECT * FROM channels ORDER BY sort ASC, id ASC") as $channel ) {
     echo "<tr>";
     echo "<td>".$channel["name"]."</td>";
     echo "</tr>";
@@ -55,9 +55,9 @@ foreach ( $mysqli->query("SELECT * FROM channels ORDER BY sort DESC, id DESC") a
 <?php
 while($row = $result->fetch_array()) { 
     if($row["months"] > 1) {
-        $monate = " Monate ";
+        $monate = " Mois ";
     } else {
-        $monate = " Monat ";
+        $monate = " Mois ";
     }
 ?>
 <form method="post" action="process.php">
@@ -65,9 +65,9 @@ while($row = $result->fetch_array()) {
   <tr>
     <td width="70%"><h4><?=$row["months"].$monate?><span style="font-size:12px">(<?=number_format($row["item_price"]/$row["months"], 2, ',', '.');?> €/mtl.)</span></h4>(das Abo beginnt mit dem Tag der Zahlung und endet automatisch nach <?=$row["abo_days"]?> Tagen)</td>
     <td width="30%">
-    <input type="hidden" name="itemname" value="<?=$row["months"]?> Monat Abo" /> 
+    <input type="hidden" name="itemname" value="<?=$row["months"]?> mois" /> 
     <input type="hidden" name="itemnumber" value="<?=$row["item_number"]?>" /> 
-    Dein Telegram Username: <br /><span style="font-size:11px">beginnend mit @</span> <input class="input" size="10" type="text" name="itemdesc" value="" required />
+    Votre username Telegram: <br /><span style="font-size:11px">commence par @</span> <input class="input" size="10" type="text" name="itemdesc" value="" required />
     
     <?php if($use_map == "PMSF") { ?>
     <br />Deine eMail: <input class="input" size="10" type="text" name="itemdesc2" value="" />
@@ -75,7 +75,7 @@ while($row = $result->fetch_array()) {
     
     <input type="hidden" name="itemprice" value="<?=$row["item_price"]?>" />
     <input type="hidden" name="itemQty" value="1" />
-    <p><input class="dw_button" type="submit" name="submitbutt" value="PayPal (<?=$row["item_price"]?> EUR)" /></p>
+    <p><input class="dw_button" type="submit" name="submitbutt" value="PayPal (<?=$row["item_price"]?> CHF)" /></p>
     </td>
   </tr>
 </table>
