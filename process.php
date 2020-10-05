@@ -201,9 +201,9 @@ if(isset($_GET["token"]) && isset($_GET["PayerID"]))
             $TansID = urldecode($httpParsedResponseAr["PAYMENTINFO_0_TRANSACTIONID"]);
             
             echo '<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">';
-            echo '<h2>Zahlung erfolgreich!</h2>';
-            echo 'Deine Transaction ID : '.urldecode($httpParsedResponseAr["PAYMENTINFO_0_TRANSACTIONID"]);
-            echo '<div style="color:green"><br>Vielen Dank, du hast einen Link zu den ausgew&auml;hlten Kan&auml;len soeben erhalten!'.$output_message.'</div>';
+            echo '<h2>Paiement réussi!</h2>';
+            echo 'Votre transaction ID : '.urldecode($httpParsedResponseAr["PAYMENTINFO_0_TRANSACTIONID"]);
+            echo '<div style="color:green"><br>Merci, vous venez de recevoir un lien vers les salons '.$output_message.'</div>';
             
                 /*
                 //Sometimes Payment are kept pending even when transaction is complete. 
