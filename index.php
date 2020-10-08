@@ -38,6 +38,8 @@ body{font-family: arial;color: #7A7A7A;margin:0px;padding:0px;}
 <body>
 <div align="center" style="padding-bottom:5px; padding-top:15px; font-size:24px; font-weight:bolder">PoGo Fribourg abonnement</div>
 <div align="center" style="padding-bottom:8px; font-size:12px"><?=$header ?></div>
+<div align="center" style="padding-bottom:8px; font-size:12px">Il faut avoir un username configurer dans Telegram</div>
+<div align="center" style="padding-bottom:8px; font-size:12px">En cas de questions : <a href="https://t.me/PoGoFribourgAboHelp">@PoGoFribourgAboHelp</a></div>
 <div class="product_wrapper">
 <div class="channel_item">
 <h4 align="center"><b>Vous aurez accès aux salons suivants:</b></h4>
